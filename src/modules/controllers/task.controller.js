@@ -27,7 +27,7 @@ module.exports.changeTaskInfo = (req, res) => {
     Task.updateOne({ _id: req.body._id }, req.body).then((result) => {
       Task.find().then((result) => {
         res.send({ data: result });
-        });
+      });
     });
   } else {
     res.status(500).send("Error");
